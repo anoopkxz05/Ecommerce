@@ -1,0 +1,1001 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    caret-color: transparent;
+}
+
+body {
+    padding-top: 120px;
+}
+
+:root {
+  --bg:           #07070d;
+  --bg-2:         #0c0c17;
+  --surface:      rgba(255,255,255,0.04);
+  --surface-2:    rgba(255,255,255,0.07);
+  --border:       rgba(255,255,255,0.08);
+  --border-2:     rgba(255,255,255,0.14);
+  --text:         #e7e9f3;
+  --text-dim:     #a3a8c2;
+  --text-mute:    #6b6f87;
+  --primary:      #6366f1;
+  --primary-2:    #818cf8;
+  --accent:       #22d3ee;
+  --violet:       #a855f7;
+  --pink:         #ec4899;
+  --green:        #22c55e;
+  --yellow:       #facc15;
+  --red:          #ef4444;
+  --grad-1: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  --grad-2: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+  --grad-3: linear-gradient(135deg, #22c55e 0%, #22d3ee 100%);
+  --grad-mesh-a: radial-gradient(60% 60% at 20% 20%, rgba(99,102,241,0.35) 0%, transparent 60%);
+  --grad-mesh-b: radial-gradient(50% 50% at 80% 30%, rgba(236,72,153,0.28) 0%, transparent 60%);
+  --grad-mesh-c: radial-gradient(70% 70% at 60% 90%, rgba(34,211,238,0.25) 0%, transparent 60%);
+  --shadow-soft:  0 20px 60px -20px rgba(99,102,241,0.45);
+  --shadow-glow:  0 0 60px rgba(99,102,241,0.35);
+  --radius:       18px;
+  --radius-sm:    12px;
+  --radius-lg:    28px;
+  --easing:       cubic-bezier(.22,.61,.36,1);
+  --font-display: "Space Grotesk","Inter",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  --font-body:    "Inter",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:    "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+.outfit-uniquifier {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-uniquifier {
+    margin: 10px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    color: rgb(34, 40, 40);
+}
+
+.caret {
+    caret-color: rgb(0, 0, 0);
+}
+
+/* header */
+.title {
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+.navbar {
+    background-color: rgb(189, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 5px 0;
+    box-shadow: 0px 0 5px 6px rgba(0, 0, 0, 0.1);
+    height: 80px;
+}
+/* .navbar:hover {
+    transition: 2s ease-in-out;
+    box-shadow: 400px 4px 8px #00ffdd69;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav h1 a {
+    padding: 10px;
+    color: rgb(171, 108, 230);
+    transition: 0.3s ease;
+}
+
+nav h1 a:hover {
+    color: rgb(171, 108, 230);
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    position: absolute;
+    right: 40px;
+}
+
+li {
+    color: rgb(90, 84, 78);
+    padding: 10px;
+    list-style: none;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s ease;
+}
+
+/* li i {
+    top: 5px;
+    right: -20px;
+    position: absolute;
+    color: black;
+    border-radius: 20px;
+    background-color: rgb(139, 139, 231);
+    padding: 10px 9px;
+} */
+li i {
+    top: 3px;
+    right: -20px;
+    position: absolute;
+    color: rgb(97, 126, 255);
+    border-radius: 10px;
+    background-color: rgba(195, 195, 195, 0.518);
+    padding: 12px;
+}
+/* li i:hover {
+    color: #fff;
+    transition: 0.5s ease;
+} */
+
+li:hover {
+    cursor: pointer;
+    color: black;
+}
+
+/* searchbar----------------------------------------------------- */
+
+.bg {
+    background-color: #4de4d0;
+}
+
+/* Container Spacing */
+#search-section {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* The outer wrapper that holds icon + input */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    /* Clean white background */
+    border: 1px solid #e0e0e0;
+    /* Subtle border */
+    border-radius: 50px;
+    /* Pill shape looks more modern */
+    padding: 5px 20px;
+    width: 500px;
+    /* Fixed width or use 50% */
+    transition: all 0.3s ease;
+    /* Smooth transition for focus */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+}
+
+/* Icon Styling */
+.search-icon {
+    font-size: 1.1rem;
+    color: #999;
+    margin-right: 12px;
+}
+
+/* The actual Input field */
+.search-input {
+    border: none;
+    outline: none;
+    /* Removes the ugly default browser blue ring */
+    width: 100%;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    background: transparent;
+}
+
+/* Modern Placeholder Styling */
+.search-input::placeholder {
+    color: #bbb;
+    font-weight: 300;
+}
+
+/* PROFESSIONAL FOCUS STATE */
+/* This is what makes it feel high-end when a user clicks it */
+.search-wrapper:focus-within {
+    border-color: #90c9ee;
+    /* Your original blue color as an accent */
+    box-shadow: 0 4px 20px rgba(144, 201, 238, 0.3);
+    width: 550px;
+    /* Subtle expansion effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .search-wrapper {
+        width: 90%;
+    }
+
+    .search-wrapper:focus-within {
+        width: 95%;
+    }
+}
+
+/* features---------------------------------------------------------- */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --black: #1a1a1a;
+    --amber: #d4a373;
+    --light-gray: #f9f9f9;
+    --border: #e0e0e0;
+}
+
+#product-feature-section {
+    padding: 100px 0;
+    background-color: #fff;
+    font-family: 'Jost', sans-serif;
+    color: var(--black);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography & Layout */
+.section-title {
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgb(168, 86, 244), rgb(120, 60, 220));
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #ffffff;
+    padding: 2px;
+    transition: 0.50s linear;
+    animation: glow 2s ease infinite;
+
+}
+
+
+/* .section-title {
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgb(168, 86, 244), rgb(120, 60, 220));
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #ffffff;
+    padding: 8px 14px;
+    display: inline-block;
+
+    animation: glow 2.5s infinite ease-in-out;
+} */
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(168, 86, 244, 0.4);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(168, 86, 244, 0.8);
+        transform: scale(1.03);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(168, 86, 244, 0.4);
+        transform: scale(1);
+    }
+}
+
+
+.section-title:hover {
+    padding: 10px;
+}
+
+.feature-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Content Styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+.badge .dot {
+    height: 6px;
+    width: 6px;
+    background-color: var(--amber);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.main-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.main-heading em {
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.sub-heading {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Stats Strip */
+.stats-strip {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: #999;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 30px;
+    background-color: var(--border);
+}
+
+/* Button */
+.btn-primary {
+    border-radius: 20px;
+    background: var(--black);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0px 0px 4px 2px rgba(0, 55, 255, 0.301);
+    transition: 0.5s ease;
+    background-color: rgb(168, 86, 244);
+    transform: translateY(-2px);
+}
+
+/* Gallery Grid */
+.feature-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hero-img {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+}
+
+.img-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--light-gray);
+}
+#img-card2{
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 2px rgb(243, 130, 130);
+}
+.img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.floating-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: white;
+    padding: 5px 12px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .feature-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .main-heading {
+        font-size: 3rem;
+    }
+}
+
+/* product section------------------------------------------------------ */
+
+.prosec {
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productimg {
+    margin-top: 30px;
+    gap: 5px;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 470px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.productimg:hover {
+    transition: 0.50s ease;
+    transition: 0.5s ease-out;
+    transform: translateY(-5px);
+}
+
+.productimg h5 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.proimg:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+}
+
+.proimg {
+    object-fit:cover;
+    margin: 20px;
+    border-radius: 10px;
+    height: 300px;
+    width: 250px;
+
+}
+
+.star i {
+    color: rgb(255, 255, 91);
+}
+
+.cart i {
+    color: rgb(128, 149, 243);
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(223, 227, 227, 0.518);
+    position: relative;
+    left: 80%;
+    bottom: 30px;
+}
+
+/* .cart i {
+    color: rgb(247, 247, 247);
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(30, 29, 29, 0.527);
+    position: relative;
+    left: 80%;
+    bottom: 30px;
+} */
+.cart i:hover {
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 4px 2px rgba(0, 55, 255, 0.301);
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+}
+
+/* collections */
+
+#collection h1 {
+    text-align: center;
+}
+
+.collection {
+    display: flex;
+    justify-content: center;
+}
+
+.colimg img {
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    transition: 0.70s ease-out;
+    margin-bottom: 50px;
+}
+
+.colimg img:hover {
+    transition: 1s ease;
+    height: 350px;
+    width: 250px;
+    border-radius: 6px;
+}
+
+/* womens collection */
+
+#womens h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    margin-top: 50px;
+    padding: 50px 30px;
+    background-color: rgb(245, 248, 250);
+}
+
+.about-title {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 40px;
+    color: rgb(40, 40, 40);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    color: rgb(90, 90, 220);
+    font-family: "Poppins", sans-serif;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgb(70, 70, 70);
+    font-family: "Poppins", sans-serif;
+}
+
+.about-content button {
+    width: fit-content;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(98, 103, 239);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about-content button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTACT SECTION */
+
+#contact {
+    margin-top: 50px;
+    padding: 60px 30px;
+    background-color: rgb(240, 245, 255);
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 40px;
+    color: rgb(40, 40, 40);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 30px;
+    color: rgb(98, 103, 239);
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(70, 70, 70);
+    margin-bottom: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(98, 103, 239);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   📱 PRO MOBILE APP RESPONSIVE STYLES
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* --- 1. Global & Body Adjustments --- */
+    body {
+        padding-top: 90px;
+        /* Reduce top padding for mobile */
+    }
+
+    /* --- 2. Header & Navigation --- */
+    nav {
+        padding: 15px 10px;
+        flex-direction: column;
+        /* Stack logo and menu */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar {
+        height: auto;
+        /* Allow navbar to grow with stacked items */
+        padding-bottom: 10px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        /* Spread links evenly */
+    }
+
+    li {
+        font-size: 13px;
+        /* Slightly smaller text for mobile */
+        padding: 5px;
+    }
+
+    /* --- 3. Product Grid (2 Columns Mobile App Style) --- */
+    /* =========================================================
+   📱 TWO-COLUMN MOBILE GRID (APP VIEW)
+   ========================================================= */
+
+    @media (max-width: 768px) {
+
+        /* 1. Ensure the container allows wrapping and has a tight gap */
+        .prosec {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            /* Forces items to move to next row */
+            justify-content: space-between;
+            /* Pushes cards to the edges */
+            padding: 10px;
+            /* Space on the sides of the screen */
+            margin: 0;
+            gap: 10px;
+            /* The space between the two products */
+        }
+
+        /* 2. Set each product card to exactly 50% width minus the gap */
+        .productimg {
+            flex: 0 0 calc(50% - 5px) !important;
+            /* (50% width) - (half of the 10px gap) */
+            width: calc(50% - 5px) !important;
+            box-sizing: border-box;
+            /* Ensures padding doesn't break the width */
+            margin: 0 0 10px 0 !important;
+            /* Space below the row */
+            height: auto !important;
+            /* Let content define the height */
+            padding: 8px;
+        }
+
+        /* 3. Adjust product images to fit the smaller cards */
+        .proimg {
+            width: 100% !important;
+            height: 150px !important;
+            /* Smaller height for mobile view */
+            margin: 0 0 8px 0 !important;
+            object-fit: cover;
+        }
+
+        /* 4. Shrink text slightly so it doesn't overflow */
+        .productimg h5 {
+            font-size: 14px !important;
+        }
+
+        .price {
+            font-size: 16px !important;
+        }
+
+        /* 5. Fix the cart icon position */
+        .cart i {
+            position: sticky;
+            bottom: 10px;
+            right: 10px;
+            left: auto !important;
+            padding: 8px;
+            font-size: 12px;
+        }
+    }
+
+    /* --- 4. Collections Section --- */
+    .collection {
+        flex-wrap: wrap;
+        /* Allow items to drop to the next line */
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .colimg {
+        width: calc(50% - 10px);
+        /* 2 columns for collections too */
+    }
+
+    .colimg img {
+        width: 100%;
+        /* Fit container */
+        height: 220px;
+        margin-bottom: 15px;
+    }
+
+    .colimg img:hover {
+        height: 220px;
+        /* Disable the enlarging hover effect on mobile */
+        width: 100%;
+    }
+
+    /* --- 5. About & Contact Sections --- */
+    .about-container,
+    .contact-container {
+        flex-direction: column;
+        /* Stack left and right sides */
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .about-image img {
+        width: 100%;
+        /* Prevent image from overflowing the screen */
+        height: auto;
+    }
+
+    .contact-form {
+        width: 100%;
+        /* Form takes full width */
+        box-sizing: border-box;
+        /* Include padding in width calculation */
+        padding: 20px 15px;
+    }
+}
+
+/* --- Extra Small Devices (Phones under 400px wide) --- */
+@media (max-width: 400px) {
+    .productimg {
+        width: 100%;
+        /* Drop to 1 product per row for tiny screens */
+    }
+
+    .colimg {
+        width: 100%;
+        /* Drop to 1 collection per row */
+    }
+}
+
+/* =========================================================
+   📱 TWO-COLUMN COLLECTIONS (MOBILE APP VIEW)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Fix the Collection Container */
+    .collection {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Allows items to jump to the next row */
+        justify-content: center;
+        gap: 15px;
+        /* Space between the two collection cards */
+        padding: 10px;
+    }
+
+    /* 2. Set each Collection Card to roughly 50% width */
+    .colimg {
+        flex: 0 0 calc(50% - 20px);
+        /* Calculations for two columns with gaps */
+        width: calc(50% - 20px);
+    }
+
+    /* 3. Perfect Height and Width for Collection Images */
+    .colimg img {
+        width: 100% !important;
+        /* Fill the 50% container */
+        height: 200px !important;
+        /* Set a fixed, uniform height for all images */
+        object-fit: cover !important;
+        /* Crops image to fill area without stretching */
+        border-radius: 15px;
+        /* Clean, rounded "app" look */
+        margin-bottom: 0 !important;
+        /* Reset your original 50px margin */
+    }
+
+    /* 4. Disable the "Enlarge" hover effect on mobile */
+    /* On touch screens, enlarging images can cause layout jumps */
+    .colimg img:hover {
+        height: 200px !important;
+        width: 100% !important;
+        transform: scale(1.02);
+        /* Use a subtle scale instead of changing px */
+    }
+}
+
+/* =========================================================
+   📱 MOBILE SEARCH BAR (COMPACT APP STYLE)
+   ========================================================= */
+
+@media (max-width: 768px) {
+    #search-section {
+        padding: 15px 0;
+        /* Reduced vertical space */
+    }
+
+    .search-wrapper {
+        width: 85% !important;
+        /* Makes it smaller and centered */
+        height: 40px;
+        /* Slimmer height for that "small" look */
+        padding: 0 15px;
+        /* Tighter internal spacing[cite: 2] */
+        margin: 0 auto;
+        /* Ensures it stays in the middle[cite: 2] */
+    }
+
+    .search-input {
+        height: 35px;
+        /* Matches the smaller wrapper[cite: 2] */
+        font-size: 0.9rem;
+        /* Slightly smaller text for mobile[cite: 2] */
+    }
+
+    .search-icon {
+        font-size: 0.9rem;
+        /* Shrink icon to match text[cite: 2] */
+        margin-right: 8px;
+    }
+
+    /* Professional focus effect for mobile */
+    .search-wrapper:focus-within {
+        width: 90% !important;
+        /* Subtle expansion when typing[cite: 2] */
+    }
+}
+

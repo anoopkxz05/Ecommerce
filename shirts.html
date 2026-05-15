@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirts | NEXUZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f7f8fc;
+    }
+    a{
+        text-decoration: none;
+        color: #222;
+    }
+    .navbar {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #6c63ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links li {
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    .shirts-container {
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .shirt-card {
+      background: white;
+      width: 280px;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .shirt-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .shirt-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .shirt-card h3 {
+      margin-top: 15px;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 700;
+      color: #6c63ff;
+      margin: 8px 0;
+    }
+
+    .stars {
+      color: #f7c948;
+      margin-bottom: 10px;
+    }
+
+    .buy-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: #6c63ff;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">NEXUZ</div>
+    <ul class="nav-links">
+      <a href="index.html"><li>Home</li></a>
+      <li>Products</li>
+      <li>About</li>
+      <li><i class="fa-solid fa-cart-shopping"></i></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Premium Shirts Collection</h1>
+    <p>Discover stylish, comfortable, and premium-quality shirts for every occasion.</p>
+  </section>
+
+  <section class="shirts-container">
+
+    <div class="shirt-card">
+      <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" alt="Casual Shirt">
+      <h3>Casual White Shirt</h3>
+      <div class="price">$24.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/2f/dc/ac/2fdcacc858bb3a8a91c31d70ce432e0f.jpg" alt="Black Shirt">
+      <h3>Classic Black Shirt</h3>
+      <div class="price">$29.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/1d/16/4c/1d164c2471120975fa075697671c4418.jpg" alt="Blue Shirt">
+      <h3>Formal Blue Shirt</h3>
+      <div class="price">$34.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/ee/b8/f7/eeb8f7f2952f20c390bcb654f0ce10b4.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/3b/41/80/3b41802e244ceb4260e27f5c15489d48.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/7d/cd/4b/7dcd4bbe1ad5b9b4458e70c51f6f99f1.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/1a/e9/c9/1ae9c9d76f2113fc39a9800eaf22abc4.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/92/26/4f/92264fa3fa7e7248b827ae0bdf628318.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/10/ea/ca/10eaca8335989a7be2ca000e8ec61bcc.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/84/0b/9c/840b9c8f904511555708009003e554e2.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/af/d3/66/afd3666cff788c23124e8fa9d57d0cf8.jpg" alt="Casual Shirt">
+      <h3>Casual White Shirt</h3>
+      <div class="price">$24.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/49/af/c9/49afc9a92fd11b5ce233380a970d7384.jpg" alt="Black Shirt">
+      <h3>Classic Black Shirt</h3>
+      <div class="price">$29.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/a8/cd/2e/a8cd2e562e552fc6b7764543b1f4b5b5.jpg" alt="Blue Shirt">
+      <h3>Formal Blue Shirt</h3>
+      <div class="price">$34.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/f8/86/eb/f886ebe8c185abfaae4daac07008f224.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/eb/44/04/eb440403d24a455f62796a9ee8b81c2b.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/1b/10/72/1b107265b0f695fc1166504b42c1a31f.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/33/f6/9c/33f69c35fa6dc2228d16ea1b0a15a7b7.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/d7/5f/67/d75f6791a53495951250c01647b91fbb.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/736x/91/bd/48/91bd48f5cf48ca5c63991b1b4047fc56.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="shirt-card">
+      <img src="https://i.pinimg.com/1200x/ea/82/af/ea82afd56d06c88e9bb45ec42e9059f6.jpg" alt="Check Shirt">
+      <h3>Checked Stylish Shirt</h3>
+      <div class="price">$39.99</div>
+      <div class="stars">★★★★★</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+  </section>
+
+</body>
+</html>
